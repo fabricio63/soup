@@ -973,11 +973,6 @@ html_doc = """<!DOCTYPE html>
     """
 soup = BeautifulSoup(html_doc,'html.parser')
 title = soup.title.string
-print("")
-print("< Fabricio Juarez >")
-print("")
-print("1.portal")
-print ("        title is: ",title)
 meta = soup.find_all("meta",limit = 8)
 for i in meta:
     si = str(i)
@@ -985,22 +980,50 @@ for i in meta:
         link_line = BeautifulSoup(si,'html.parser')
 link_attrs = link_line.meta
 link_name = link_attrs['content']
-print("")
-print ("        adress is: ",link_name)
+
 
 link_tag = soup.find_all("link")
-print("")
-print("hrefs are: ")
+# print("")
+# print("hrefs are: ")
 
 for i in link_tag :
-    print("---------------------------------------------------------------------------------------------------")
-    print("   - ",i['href'])
+    # print("---------------------------------------------------------------------------------------------------")
+    # print("   - ",i['href'])
+    pass
 
-ul_tag = soup.find_all("a")
-for i in ul_tag :
-    print("---------------------------------------------------------------------------------------------------")
-    print("   - ",i['href'])
-    
-    
+a_tag = soup.find_all("a")
+for i in a_tag :
+    # print("---------------------------------------------------------------------------------------------------")
+    # print("   - ",i['href'])
+    no = str(i)
+    if no == '<a href="mailto:inf@ufm.edu" style="color:#333;">inf@ufm.edu</a>':
+        mail_line = BeautifulSoup(no,'html.parser')
+mail_attrs = mail_line.a
+mail_name = mail_attrs['href']
 
-    
+dd = '''<a href='tel:+50223387700'>(+502) 2338-7700</a>'''
+
+for i in a_tag :
+    if i['href'] =="tel:+50223387700":
+        number_name = i['href']
+
+
+
+# number_attrs = number_line.a
+# number_name = number_attrs['href']
+# print (number_name)
+
+print("")
+print("< Fabricio Juarez >")
+print("")
+print("1.portal")
+print ("        title is: ",title)   
+print("")
+print ("        mail is: ",mail_name)
+print("")
+print ("        adress is: ",link_name)   
+print("")
+print ("       ",number_name)   
+
+
+        
