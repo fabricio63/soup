@@ -1,13 +1,32 @@
 import requests
 from bs4 import BeautifulSoup
-# THIS IS THE WEB SCRAPPING
-url = "https://ufm.edu/Estudios"
-html_doc = requests.get(url)
-# THIS CREATES THE SOUP OBJECT
-soup = BeautifulSoup(html_doc.text,'html.parser')
-a_tag = soup.find_all("a",)
+from sys import argv
+import code
+def all():
+    code.portal()
+    code.estudio()
+    code.css()
+    code.directorio()
+
+def main():
+    arg = len(argv)
+    try:
+        if arg == 1:
+            all()
+        elif arg !=1:
+            if argv[1] =='1':
+                code.portal()
+            if argv[1] == '2':
+                code.estudio() 
+            if argv[1] == '3':
+                code.css()
+            if argv[1] == '4':
+                code.directorio()
+    except:
+        print("command line argument not valid")
+
+main()
+            
 
 
-for i in a_tag :
-    
-    print(i.text)
+
