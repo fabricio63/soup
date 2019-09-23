@@ -20,6 +20,7 @@ link_name = link_attrs['content']
 
 link_tag = soup.find_all("link")
 a_tag = soup.find_all("a")
+img_tag = soup.find_all("img")
 def print_refs(tags):
     for i in tags :
         print("---------------------------------------------------------------------------------------------------")
@@ -51,12 +52,41 @@ print("")
 print ("        adress is: ",link_name)   
 print("")
 print ("       ",number_name)   
-# print("")
-# print ("        email button is : ",button_name)  
-# print("")
-# print ("        MIU button is : ",button_MIU)  
+print("")
+print ("        email button is : ",button_name)  
+print("")
+print ("        MIU button is : ",button_MIU)  
 print("")
 print ("        a_tag length is: ",len(a_tag)) 
+print("")
+
+
+if (len(link_tag)+len(a_tag)) < 30:
+    print("hrefs are:")
+    print_refs(link_tag)
+    print_refs(a_tag)
+else:
+    print("creating txt file for href and img sources (file name is href.txt)")
+    f = open("href.txt","w+")
+    f.write("hrefs are: ")
+    f.write('\n')
+    for i in link_tag:
+        writing =i['href']
+        f.write(writing)
+        f.write('\n')
+        
+    for i in a_tag:
+        writing = i['href']
+        f.write(writing)
+        f.write('\n')
+    f.write('\n')
+    f.write("img sources are:")
+    f.write('\n')
+    for i in img_tag:
+        writing = i['src']
+        f.write(writing)
+        f.write('\n')    
+        
 
 
         
