@@ -1,24 +1,41 @@
-#!/usr/bin/env python3
+import requests
 from bs4 import BeautifulSoup
-import requests,sys,csv,json
+from sys import argv
+import code
+def all():
+    code.portal()
+    print("")
+    print("")
+    print("")
+    code.estudio()
+    print("")
+    print("")
+    print("")
+    code.css()
+    print("")
+    print("")
+    print("")
+    code.directorio()
 
-url="http://ufm.edu/Portal"
-# Make a GET request to fetch the raw HTML content
-try:
-    html_content = requests.get(url).text
-except:
-    print(f"unable to get {url}")
-    sys.exit(1)
+def main():
+    arg = len(argv)
+    try:
+        if arg == 1:
+            all()
+        elif arg !=1:
+            if argv[1] =='1':
+                code.portal()
+            if argv[1] == '2':
+                code.estudio() 
+            if argv[1] == '3':
+                code.css()
+            if argv[1] == '4':
+                code.directorio()
+    except:
+        print("command line argument not valid")
 
-# Parse the html content, this is the Magic ;)
-soup = BeautifulSoup(html_content, "html.parser")
+main()
+            
 
-# print if needed, gets too noisy
-#print(soup.prettify())
 
-print(soup.title)
-print(soup.title.string)
 
-for div in soup.find_all("div"):
-    print(div)
-    print("--------------------------")

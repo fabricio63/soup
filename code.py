@@ -47,30 +47,32 @@ def portal():
 
     print("")
     print("< Fabricio Juarez >")
-    print("=====================")
+    print("====================================================================================================================")
     print("1.portal")
-    print ("        title is: ",title)   
-    print("")
+    print("        title is: ",title)   
+    print("--------------------------------------------------------------------------------------------------------")
+    
     print ("        mail is: ",mail_name)
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
+
     print ("        adress is: ",link_name)   
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print ("       ",number_name)   
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print ("        email button is : ",button_name)  
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print ("        MIU button is : ",button_MIU)  
     print("")
     print ("        a_tag length is: ",len(a_tag)) 
-    print("")
-    print("nav bar buttons are: ")
+    print("--------------------------------------------------------------------------------------------------------")
+    print("        nav bar buttons are: ")
     for i in soup.find_all("div"):
         n = i.get('class')
         if type(n) == list:
             if n[0] == 'menu-key':
                 r = i.get('data-menu')
                 if r != None :
-                    print("- ",r)
+                    print("                                - ",r)
 
     if (len(link_tag)+len(a_tag)) < 30:
         print("hrefs are:")
@@ -79,7 +81,7 @@ def portal():
     else:
         print("")
         print("creating txt file for href and img sources (file name is href.txt)")
-        f = open("href.txt","w+")
+        f = open("C:\logs\href.txt","w+")
         f.write("hrefs are: ")
         f.write('\n')
         for i in link_tag:
@@ -102,7 +104,7 @@ def portal():
 def finder(tag,keye):
         for i in tag :
             if i.text == keye:
-                print("--------------------------------------------------------------------------------------")
+                print("--------------------------------------------------------------------------------------------------------")
                 print(keye," links to ",i['href'])
 
 def estudio():
@@ -115,7 +117,7 @@ def estudio():
     a_tag28 = soup.find_all("a")
     a_tag100 = soup.find_all("a",limit = 100)
     a_tag150 = soup.find_all("a",limit = 300)
-    print("===================")
+    print("====================================================================================================================")
     print ("2.estudios")
     #fdsffsfsfs
     f = open("estudios.txt","w+")
@@ -138,9 +140,8 @@ def estudio():
     finder(a_tag,"Alumni")
     finder(a_tag,"Campus Madrid")
     finder(a_tag,"Redes Sociales")
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print("IMPRIMIENDO ESTUDIOS A ESTUDIOS.TXT")
-    print("")
     f.write("Doctorados son:")
     f.write('\n')
     finder_txt(a_tag28,"Programa de Doctorado")
@@ -211,19 +212,33 @@ def estudio():
     finder_txt(a_tag28,"Lengua y Literatura")
     finder_txt(a_tag28,"Medicina")
     finder_txt(a_tag28,"Nutrición Clínica")
-
+    print(("--------------------------------------------------------------------------------------------------------"))
     print("left bar icons are:")
     finder(a_tag100,"Biblioteca")
     finder(a_tag100,"New Media")
     finder(a_tag100,"Calendario")
     finder(a_tag100,"Directorio")
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print("a_tag length is:",len(a_tag28))
-    print("")
+    ("--------------------------------------------------------------------------------------------------------")
     print("links to social media are: ")
-    finder(a_tag150," Facebook")
-    finder(a_tag150," Twitter")
-    finder(a_tag150," Linkedin")
+    div_social = soup.find("div", class_ = "social pull-right")
+    div_text = div_social.find_all("a")
+    lista_links = []
+    for i in div_text:
+        lista_links.append(i['href'])
+   
+    print("- linkedin links to: ", lista_links[0])
+   
+    print("- facebook links to: ", lista_links[1])
+   
+    print("- twitter links to: ", lista_links[2])
+   
+    print("- google links to: ", lista_links[3])
+   
+    print("- youtube links to: ", lista_links[4])
+   
+    print("- pinterest links to: ", lista_links[5])
         
 
 def css():
@@ -241,17 +256,23 @@ def css():
     local_file = open('logo.jpg', 'wb')
     resp.raw.decode_content = True
     shutil.copyfileobj(resp.raw, local_file)
-    print("==============================")
+    print("====================================================================================================================")
     print("3. computer science")
 
     print("title is: ",soup.title.text)
     a_tag = soup.find_all("a")
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print ("number of a_tag is: ",len(a_tag))
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
+    title = soup.find("meta", property = "og:title")
+    print ("og:title is ",title['content'])
+    print("--------------------------------------------------------------------------------------------------------")
+    description = soup.find("meta", property = "og:description")
+    print ("og:description is ",description['content'])
+    print("--------------------------------------------------------------------------------------------------------")
     div_tag = soup.find_all("div")
     print ("number of a_tag is: ",len(div_tag))
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print("downloading image (name will be logo.jpg)")
     sleep(1.5)
         
@@ -297,9 +318,8 @@ def directorio():
         f.write('\n')
         f.write(i)
         f.write('\n')
-    print("=====================")
+    print("====================================================================================================================")
     print("4.directorio")
-    print("")
+    print("--------------------------------------------------------------------------------------------------------")
     print("imprimiendo directorio de emails a 4directorio_emails.txt")
-    print("")
-    print("numero de emails que empiezan con vocal son: ",cont)
+    print("--------------------------------------------------------------------------------------------------------")
