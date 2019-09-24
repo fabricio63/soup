@@ -81,7 +81,7 @@ def portal():
     else:
         print("")
         print("creating txt file for href and img sources (file name is href.txt)")
-        f = open("C:\logs\href.txt","w+")
+        f = open("href.txt","w+")
         f.write("hrefs are: ")
         f.write('\n')
         for i in link_tag:

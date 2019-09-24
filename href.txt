@@ -255,8 +255,8 @@ https://www.ufm.edu/images/0/0e/Loa_Fco_Marroquin.pdf
 /Tarifario_2019
 /Valores
 /Virtudes
-https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=753553871119-42rgfeitjhbrq449nj1906662pupr1j0.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.ufm.edu%2Fautenticacion%2Foauth2_init.php&state=d047b7b2d06da33ba70d427df68d4435&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=auto&hd=ufm.edu
-https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=offline&client_id=514583071787-mcsoogoa3kb7v56n7r78obvusehc81br.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmiu.ufm.edu%2Findex.php&state=510fa7476e9f9456698ffd7176b25b81&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=force&hd=ufm.edu&login_hint=ejemplo%40ufm.edu
+https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=online&client_id=753553871119-42rgfeitjhbrq449nj1906662pupr1j0.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.ufm.edu%2Fautenticacion%2Foauth2_init.php&state=90bae6a89deb2bb15063f4f7d2bda0b7&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=auto&hd=ufm.edu
+https://accounts.google.com/o/oauth2/auth?response_type=code&access_type=offline&client_id=514583071787-mcsoogoa3kb7v56n7r78obvusehc81br.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmiu.ufm.edu%2Findex.php&state=c7604ba79366b042b91eb2b1cd57ece7&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&approval_prompt=force&hd=ufm.edu&login_hint=ejemplo%40ufm.edu
 https://www.ufm.edu/english/
 https://foufm.org
 https://www.ufm.edu/checkout/donaciones/
@@ -336,18 +336,18 @@ https://www.ufm.edu/index.php/Mapa_Campus
 
 img sources are:
 https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=Lb4Mn1QolK10uG
-/skins/Ufm/img/xnobleza3.png.pagespeed.ic.4ASuxhZSoM.png
-/skins/Ufm/img/xnobleza3.png.pagespeed.ic.4ASuxhZSoM.png
-/skins/Ufm/img/xnobleza3.png.pagespeed.ic.4ASuxhZSoM.png
+/skins/Ufm/img/xfortaleza3.png.pagespeed.ic.sWMrd0pX_v.png
+/skins/Ufm/img/xsabiduria3.png.pagespeed.ic.oW-8f6AmCx.png
+/skins/Ufm/img/xcoraje3.png.pagespeed.ic.FNsRGXoQXX.png
 /skins/Ufm/img/xfortaleza3.png.pagespeed.ic.sWMrd0pX_v.png
 /skins/Ufm/img/xcoraje3.png.pagespeed.ic.FNsRGXoQXX.png
 /skins/Ufm/img/xLogotipoUFM.png.pagespeed.ic.F1uZhpmWlC.png
 /skins/Ufm/img/LogotipoUFM-top_rojo.png.pagespeed.ce.Jh46KSdFBs.png
 /images/c/c9/xPlantilla-foto-portal.jpg.pagespeed.ic.gm_iBdznkY.jpg
-/skins/Ufm/img/xnobleza3.png.pagespeed.ic.4ASuxhZSoM.png
-/skins/Ufm/img/xcoraje3.png.pagespeed.ic.FNsRGXoQXX.png
-/skins/Ufm/img/xnobleza3.png.pagespeed.ic.4ASuxhZSoM.png
+/skins/Ufm/img/xfortaleza3.png.pagespeed.ic.sWMrd0pX_v.png
 /skins/Ufm/img/xsabiduria3.png.pagespeed.ic.oW-8f6AmCx.png
+/skins/Ufm/img/xcoraje3.png.pagespeed.ic.FNsRGXoQXX.png
+/skins/Ufm/img/xfortaleza3.png.pagespeed.ic.sWMrd0pX_v.png
 /skins/Ufm/img/xcoraje3.png.pagespeed.ic.FNsRGXoQXX.png
 //www.ufm.edu/skins/Ufm/plugins/RssCitasFondos/img/x1569283233_thumb_snoticiaswpcontentuploads201909viveufmthumb.png.pagespeed.ic.HkWUSgIIbq.jpg
 //www.ufm.edu/skins/Ufm/plugins/RssCitasFondos/img/x1569283233_thumb_snoticiaswpcontentuploads201909debtorthumb.png.pagespeed.ic.gW5x01hgw3.jpg
